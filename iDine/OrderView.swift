@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-enum OrderSection: CaseIterable {
-    case menuItems
-    case placeOrder
-}
-
 struct OrderView: View {
-    let orderList: [MenuItem] = MockData().sampleMenu
-    
+    @EnvironmentObject var order: OrderManager
+    @Binding var selectedTab: Int
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                ForEach(orderList) { list in
+                    ForEach(order.items) { item in
                         HStack {
-                            Text(list.name)
+                            Text(item.name)
                             Spacer()
-                            Text("\(list.price, format: .currency(code: "INR"))")
+                            Text("\(item.price, format: .currency(code: "INR"))")
                         }
                     }
+                    .onDelete(perform: order.remove)
+                }
+                
+                NavigationLink(destination: PaymentView(selectedTab: $selectedTab, baseTotal: order.totalPrice)) {
+                    Text("Place Order")
                 }
             }
             
@@ -35,5 +35,5 @@ struct OrderView: View {
 }
 
 #Preview {
-    OrderView()
+    OrderView(selectedTab: .constant(0))
 }

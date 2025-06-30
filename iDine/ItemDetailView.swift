@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ItemDetailView: View {
+    @EnvironmentObject var order: OrderManager
+    
     var imageWidth: CGFloat {
         UIScreen.main.bounds.width
     }
@@ -32,19 +34,15 @@ struct ItemDetailView: View {
                     .padding(.horizontal,16)
                
                 Button("Order Now") {
-                    print("Login Button")
+                    order.add(item)
                 }
-                .font(.headline)
-                .foregroundStyle(.white)
-                .frame(width: 150, height: 44)
-                .background(.blue)
-                .cornerRadius(8)
-                .padding(.vertical)
+                .buttonStyle(.borderedProminent)
                 
                 Spacer()
             }
             .navigationTitle(item.name)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .tabBar)
         }
     }
 }

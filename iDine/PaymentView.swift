@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct PaymentView: View {
+    @Binding var selectedTab: Int
+    @EnvironmentObject var order: OrderManager
+    @Environment(\.dismiss) var dismiss
     @State var selectedTip: Int = 15
-    @State var baseTotal: Double = 22.00
     @State var hasShownAlert: Bool = false
+    
+    var baseTotal: Double = 0.0
     
     var totalPrice: Double {
         let tipAmount = baseTotal * Double(selectedTip) / 100
@@ -27,18 +31,17 @@ struct PaymentView: View {
 
             }
             .alert("Order Confirmation", isPresented: $hasShownAlert, actions: {
-                Button("Ok", role: .cancel) { }
+                Button("Ok", role: .cancel) {
+                    order.removeAll()
+                    selectedTab = 0 // Back to Home
+                    dismiss()
+                }
             }, message: {
                 Text("Your order total is \(totalPrice, format: .currency(code: "INR")), Thank you.")
             })
             .navigationTitle("Payment")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .tabBar)
         }
     }
 }
-
-#Preview {
-    PaymentView()
-}
-
-
