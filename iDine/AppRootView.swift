@@ -15,9 +15,9 @@ struct AppRootView: View {
                     Label("Menu", systemImage: "list.dash")
                 }
             
-            PaymentView()
+            OrderView()
                 .tabItem {
-                    Label("Cart", systemImage: "cart")
+                    Label("Order", systemImage: "cart")
                 }
         }
     }
