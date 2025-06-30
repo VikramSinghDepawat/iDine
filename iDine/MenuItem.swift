@@ -15,4 +15,3 @@ struct MenuItem: Identifiable {
     let imageURL: String
     let category: MenuCategory
 }
-

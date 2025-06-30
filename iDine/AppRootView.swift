@@ -15,7 +15,7 @@ struct AppRootView: View {
                     Label("Menu", systemImage: "list.dash")
                 }
             
-            Text("Cart View (To Be Implemented)")
+            PaymentView()
                 .tabItem {
                     Label("Cart", systemImage: "cart")
                 }
