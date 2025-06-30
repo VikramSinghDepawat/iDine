@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Menu", systemImage: "list.dash")
+                }
+            
+            Text("Cart View (To Be Implemented)")
+                .tabItem {
+                    Label("Cart", systemImage: "cart")
+                }
+        }
     }
 }
 

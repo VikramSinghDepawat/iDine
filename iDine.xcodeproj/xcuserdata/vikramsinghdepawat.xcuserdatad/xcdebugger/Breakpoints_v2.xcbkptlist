@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AA496241-2A9E-4A6E-BD81-A3765C38AC62"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C7A5C95-4D4D-4839-8B38-0E43DD391E3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iDine/ItemDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D105A2F-E6B2-4C90-9385-013729CCCBB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iDine/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6D105A2F-E6B2-4C90-9385-013729CCCBB9 - 97303be78a069cd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (iDine.MenuItem) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt; in closure #1 (iDine.MenuCategory) -&gt; Swift.Optional&lt;SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuCategory&gt;, iDine.MenuCategory, Swift.Optional&lt;SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt;, SwiftUI.EmptyView&gt;&gt;&gt; in iDine.ContentView.body.getter : some"
+                  moduleName = "iDine.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikramsinghdepawat/Documents/Learning/SwifftUI/iDine/iDine/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19">
+               </Location>
+               <Location
+                  uuid = "6D105A2F-E6B2-4C90-9385-013729CCCBB9 - e6ed84e31eb820fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.Text in closure #1 (iDine.MenuItem) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt; in closure #1 (iDine.MenuCategory) -&gt; Swift.Optional&lt;SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt;, SwiftUI.EmptyView&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuCategory&gt;, iDine.MenuCategory, Swift.Optional&lt;SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;iDine.MenuItem&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.Text, iDine.ItemDetailView&gt;&gt;, SwiftUI.EmptyView&gt;&gt;&gt; in iDine.ContentView.body.getter : some"
+                  moduleName = "iDine.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vikramsinghdepawat/Documents/Learning/SwifftUI/iDine/iDine/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

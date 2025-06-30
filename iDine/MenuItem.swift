@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct MenuItem: Identifiable {
+    let id: String
+    let name: String
+    let description: String
+    let price: Double
+    let imageURL: String
+    let category: MenuCategory
+}
+

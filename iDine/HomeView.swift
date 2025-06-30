@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  iDine
 //
 //  Created by Vikram Singh Depawat on 30/06/25.
@@ -11,20 +11,25 @@ struct HomeView: View {
     let groupedItems = Dictionary(grouping: MockData().sampleMenu, by: { $0.category })
     
     var body: some View {
-        List {
-            ForEach(MenuCategory.allCases, id: \.self) { category in
-                if let items = groupedItems[category] {
-                    Section(header: Text(category.rawValue)) {
-                        ForEach(items) { item in
-                            NavigationLink(destination: ItemDetailView(item: item)) {
-                                Text(item.name)
+        NavigationStack {
+            List {
+                ForEach(MenuCategory.allCases, id: \.self) { category in
+                    if let items = groupedItems[category] {
+                        Section(header:
+                            Text(category.rawValue)
+                            .font(.headline)
+                        ) {
+                            ForEach(items) { item in
+                                NavigationLink(destination: ItemDetailView(item: item)) {
+                                    RowView(item: item, avatarSize: .small)
+                                }
                             }
                         }
                     }
                 }
             }
+            .navigationTitle("Menu")
         }
-        .padding()
     }
 }
 
