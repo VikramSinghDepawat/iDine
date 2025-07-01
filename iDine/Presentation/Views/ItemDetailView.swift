@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ItemDetailView: View {
-    @EnvironmentObject var order: OrderManager
+    @StateObject private var viewModel: ItemDetailViewModel
     
     var imageWidth: CGFloat {
         UIScreen.main.bounds.width
@@ -17,7 +17,13 @@ struct ItemDetailView: View {
         return imageWidth * 0.7
     }
     
-    let item: MenuItem
+    private let item: MenuItem
+    
+    init(orderManager: any OrderManaging, item: MenuItem) {
+        _viewModel = StateObject(wrappedValue: ItemDetailViewModel(orderManager: orderManager))
+        self.item = item
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 15) {
@@ -34,7 +40,7 @@ struct ItemDetailView: View {
                     .padding(.horizontal,16)
                
                 Button("Order Now") {
-                    order.add(item)
+                    viewModel.addToOrder(item)
                 }
                 .buttonStyle(.borderedProminent)
                 
@@ -45,8 +51,4 @@ struct ItemDetailView: View {
             .toolbar(.hidden, for: .tabBar)
         }
     }
-}
-
-#Preview {
-    ItemDetailView(item: MockData().sampleMenu[0])
 }

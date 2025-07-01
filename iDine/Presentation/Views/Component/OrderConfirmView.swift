@@ -11,14 +11,13 @@ struct OrderConfirmView: View {
     @Binding var hasShownAlert: Bool
 
     var totalPrice: Double
-    var selectedTip: Int
+    var onConfirm: () -> Void
     
     var body: some View {
         Section(header: Text("Total: \(totalPrice, format: .currency(code: "INR"))")) {
             Button("Confirm order") {
-                // Handle order confirmation
                 hasShownAlert = true
-                print("Order confirmed with tip: \(selectedTip)%")
+                onConfirm()
             }
             .foregroundColor(.blue)
         }

@@ -9,26 +9,26 @@ import SwiftUI
 
 struct AppRootView: View {
     @State private var selectedTab = 0
-    @StateObject private var order = OrderManager()
+    @StateObject private var orderManager = OrderManager()
     
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView()
+                .environmentObject(orderManager)
                 .tabItem {
                     Label("Menu", systemImage: "list.dash")
                 }
                 .tag(0)
             
             OrderView(selectedTab: $selectedTab)
+                .environmentObject(orderManager)
                 .tabItem {
                     Label("Order", systemImage: "cart")
                 }
                 .tag(1)
         }
-        .environmentObject(order)
     }
 }
-
 
 #Preview {
     AppRootView()

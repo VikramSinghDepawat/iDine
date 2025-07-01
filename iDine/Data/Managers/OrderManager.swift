@@ -5,10 +5,10 @@
 //  Created by Vikram Singh Depawat on 01/07/25.
 //
 
-import Foundation
+import SwiftUI
 
-class OrderManager: ObservableObject {
-    @Published var items: [MenuItem] = []
+final class OrderManager: OrderManaging, ObservableObject {
+    @Published private(set) var items: [MenuItem] = []
     
     func add(_ item: MenuItem) {
         items.append(item)

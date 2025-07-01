@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MenuItem: Identifiable {
+struct MenuItem: Identifiable, Equatable {
     let id: String
     let name: String
     let description: String
