@@ -7,17 +7,19 @@
 
 import SwiftUI
 
+enum TipOptions {
+    static let percentages = [10, 15, 20, 25, 0]
+}
+
 struct AddTipView: View {
-    private let tipPercentages = [10, 15, 20, 25, 0]
     @Binding var selectedTip: Int
     
     var body: some View {
         Section(header: Text("Add a tip?")) {
             HStack {
-                ForEach(tipPercentages, id: \.self) { tip in
+                ForEach(TipOptions.percentages, id: \.self) { tip in
                     Button(action: {
                         selectedTip = tip
-                        print("selectedTip: \(tip)")
                     }) {
                         Text("\(tip)%")
                             .padding(.vertical, 8)
